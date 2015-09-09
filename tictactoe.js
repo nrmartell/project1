@@ -2,13 +2,13 @@ $(document).ready(function(){
 
 	alert ("pick a player");
 //button clicks!
- 	$("#playerOne").click(function(){
+ 	var playerOne = $("#playerOne").click(function(){
    		 alert( "You are Player one")
     	 console.log("playerOne");
     	});
 
-	$("#playerTwo").click(function(){
-   		 
+	var playerTwo= $("#playerTwo").click(function(){
+   		 alert("Hand it over to player one")
     	 console.log("playerTwo");
     	});
 
@@ -16,32 +16,32 @@ $(document).ready(function(){
    		 
     	 console.log("newGame");
     	});
+ 
+
+});/*closing document ready*/
+var cell;
+var nextTurn = 'X';
+
+function cellClick(cell){
+if (cell.innerHTML === 'X' || cell.innerHTML === 'O')
+{ alert ('Square has already been choosen, please select another square');
+return
+}
+cell.innerHTML = nextTurn;
+playersTurn();
+
+}
+function playersTurn(){
+if(nextTurn == 'X'){
+    nextTurn = 'O';
+    }
+else {
+    nextTurn = 'X';
+    }
+
+}
+
+ 
 
 
 
-
-
-
-
-/*var firstTurn= 'X'
-
-if (this.id == "boxzero")
- {
-      if(document.getElementById("boxzero").innerHTML == ""){ 
-           document.getElementById("boxzero").innerHTML = firstTurn;
-           changeTurn();
-           console.log("hey it clicked");
-      }
- }  
-
- function nextTurn(){
-      if(nextTurn == 'X'){
-           nextTurn = 'O';
-      } else {
-           nextTurn = 'X';
-      } 
- } */
-
-
-
- });/*closing document ready*/
