@@ -2,10 +2,12 @@
 header, h2{
 	text-align: center;
 }
-
-.scoreboard  {border-collapse:collapse;border-spacing:0;}
+.scoreboard{
+	vertical-align: center;
+}
+.scoreboard  {border-collapse:collapse;border-spacing:5;}
 .scoreboard td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.scoreboard th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.scoreboard th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 
 
 .gameboard  {border-collapse:collapse;border-spacing:0;}
