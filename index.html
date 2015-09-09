@@ -9,15 +9,29 @@
 
 
       <title>Tic Tac Toe Yo!</title>
-</head>
-<body>
+  </head>
+  <body>
 	<!--Game Title Row 1-->
   <div class= "row">
-    <h1>Tic Tac Toe!!</h1>
+   <header> <h1>Tic Tac Toe!!</h1></header>
   </div>
 	<!--Player Scores Box Row 2-->
   <div class= "row">
-
+    <div class= "col-md-6">
+      <table class="scoreboard">
+       <tr>
+       <th class="scoretitle" colspan="2"> Player Scores</th>
+       </tr>
+       <tr>
+          <td class="playerOne">Player 1</td>
+          <td class="playerOneScore"style="width: 75px"></td>
+       </tr>
+       <tr>
+          <td class="playerTwo">Player 2</td>
+          <td class="playerTwoScore" style="width: 75px"></td>
+        </tr>
+      </table>
+    </div>
   </div>
 
 	<!--Player 1's Side *right Row 3-->
@@ -54,7 +68,7 @@
   <div class= "row">
     <button class="new-game">New Game</button>
   </div>
-   </div>
+  </div>
   
 
 <!--Player 2's Side *left-->
@@ -70,5 +84,5 @@
 
 
 
-</body>
+  </body>
 </html>
