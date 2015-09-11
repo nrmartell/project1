@@ -1,130 +1,113 @@
 $(document).ready(function(){
 
   
-  alert ("pick a player");
+alert ("pick a player");
 //button clicks!
-    $("#playerOne").click(function(){
-   		 alert( "You are Player one")
-    	 console.log("playerOne");
-    	});
+$("#playerOne").click(function(){
+    alert( "You are Player one")
+    console.log("playerOne");
+});
 
-	$("#playerTwo").click(function(){
-   		 alert("Hand it over to player one")
-    	 console.log("playerTwo");
-    	});
+$("#playerTwo").click(function(){
+   	alert("Hand it over to player one")
+    console.log("playerTwo");
+});
 
-	   $("#newGame").click(function(){
-
-   		 
-    	 console.log("newGame");
-    	}); 
+$("#newGame").click(function(){
+    console.log("newGame");
+}); 
  
  
  
- turns=0;
+var turns=0;
     
-      $('.gameboard').find('td').on('click', function(){
-            if (turns % 2 === 0){
-              $(this).text('X'); 
-              checkWinner('X');
-            } else {
-              $(this).text('O');
-              checkWinner('O');
-            }
-          turns++;
-          
-      });
+$('.gameboard').find('td').on('click', function(){
+    if (turns % 2 === 0){
+        //$(this).text('X'); 
+         turns++;
+        checkWinner('X');
+       
+    } else {
+        //$(this).text('O');
+        turns++;
+        checkWinner('O');
+
+
+        }
+    });
 
 
 
 
-  function checkWinner(){
-    var winner= null;
-    var boxzero= $("#boxzero").text();
-    var boxone= $("#boxone").text();
-    var boxtwo= $("#boxtwo").text();
-    var boxthree= $("#boxthree").text();
-    var boxfour= $("#boxfour").text();
-    var boxfive= $("#boxfive").text();
-    var boxsix= $("#boxsix").text();
-    var boxseven= $("#boxseven").text();
-    var boxeight= $("#boxeight").text();
+function checkWinner(){
+    var boxzero = $("#boxzero").text();
+    var boxone = $("#boxone").text();
+    var boxtwo = $("#boxtwo").text();
+    var boxthree = $("#boxthree").text();
+    var boxfour = $("#boxfour").text();
+    var boxfive = $("#boxfive").text();
+    var boxsix = $("#boxsix").text();
+    var boxseven = $("#boxseven").text();
+    var boxeight = $("#boxeight").text();
     
    
 
     if (boxzero === 'X' && boxone === 'X'&& boxtwo=== 'X'){
-          console.log ("winner x across row 1");
-          
-          alert("Player 1 wins! Play Again");
-          return winner= X;
-          console.log('return winner');
-           
+        console.log ("winner x across row 1");
+        alert("Player 1 wins! Play Again");
     }
-      else if (boxthree === 'X' && boxfour === 'X'&& boxfive=== 'X'){
+    else if (boxthree === 'X' && boxfour === 'X'&& boxfive=== 'X'){
         console.log ("winner x across row 2");
         alert("Player 1 wins! Play Again");
-        
-
-        }
-        else if (boxsix === 'X' && boxseven === 'X'&& boxeight=== 'X'){
-          console.log ("winner x across row 3");
-          alert("Player 1 wins! Play Again");
+    }
+    else if (boxsix === 'X' && boxseven === 'X'&& boxeight=== 'X'){
+        console.log ("winner x across row 3");
+        alert("Player 1 wins! Play Again");
           
-        }
-          else if (boxzero === 'X' && boxthree === 'X'&& boxsix=== 'X'){
-            console.log ("winner x down column 1");
-            alert("Player 1 wins! Play Again");
-            
-          }
-            else if (boxone === 'X' && boxfour === 'X'&& boxseven=== 'X'){
-              console.log ("winner x down column 2");
-              alert("Player 1 wins! Play Again");
-              
-            }
-              else if (boxtwo === 'X' && boxfive === 'X'&& boxeight=== 'X'){
-                console.log ("winner x down column 3");
-                alert("Player 1 wins! Play Again");
-                
-              }
-      else if (boxzero === 'O' && boxone === 'O'&& boxtwo=== 'O'){
+    }
+    else if (boxzero === 'X' && boxthree === 'X'&& boxsix=== 'X'){
+        console.log ("winner x down column 1");
+        alert("Player 1 wins! Play Again");
+    }
+    else if (boxone === 'X' && boxfour === 'X'&& boxseven=== 'X'){
+        console.log ("winner x down column 2");
+        alert("Player 1 wins! Play Again");
+    }
+    else if (boxtwo === 'X' && boxfive === 'X'&& boxeight=== 'X'){
+        console.log ("winner x down column 3");
+        alert("Player 1 wins! Play Again");
+    }
+    else if (boxzero === 'O' && boxone === 'O'&& boxtwo=== 'O'){
         console.log ("winner x across row 1");
         alert("Player 2 wins! Play Again");
-        
-      }
-        else if (boxthree === 'O' && boxfour === 'O'&& boxfive=== 'O'){
-          console.log ("winner x across row 2");
-          alert("Player 2 wins! Play Again");
-          
-        }
-          else if (boxsix === 'O' && boxseven === 'O'&& boxeight=== 'O'){
-            console.log ("winner x across row 3");
-            alert("Player 2 wins! Play Again");
-            
-          }
-            else if (boxzero === 'O' && boxthree === 'O'&& boxsix=== 'O'){
-              console.log ("winner x down column 1");
-              alert("Player 2 wins! Play Again");
-              
-            }
-              else if (boxone === 'O' && boxfour === 'O'&& boxseven=== 'O'){
-                console.log ("winner O down column 2");
-                alert("Player 2 wins! Play Again");
-                
-              }
-                else if (boxtwo === 'O' && boxfive === 'O'&& boxeight=== 'O'){
-                  console.log ("winner O down column 3");
-                  alert("Player 2 wins! Play Again");
-                  
-                  }
-                  if (turns>=9){
-                    alert("Lets call this a draw!");
-                  }
+    }
+    else if (boxthree === 'O' && boxfour === 'O'&& boxfive=== 'O'){
+        console.log ("winner x across row 2");
+        alert("Player 2 wins! Play Again");
+    }
+    else if (boxsix === 'O' && boxseven === 'O'&& boxeight=== 'O'){
+        console.log ("winner x across row 3");
+        alert("Player 2 wins! Play Again");
+    }
+    else if (boxzero === 'O' && boxthree === 'O'&& boxsix=== 'O'){
+        console.log ("winner x down column 1");
+        alert("Player 2 wins! Play Again");
+    }
+    else if (boxone === 'O' && boxfour === 'O'&& boxseven=== 'O'){
+        console.log ("winner O down column 2");
+        alert("Player 2 wins! Play Again");
+    }
+    else if (boxtwo === 'O' && boxfive === 'O'&& boxeight=== 'O'){
+        console.log ("winner O down column 3");
+        alert("Player 2 wins! Play Again");
+    }
+    if (turns>=9){
+        alert("Lets call this a draw!");
+    }
+
 }
          
-          $(".cell").click(function(){
-  
-              checkWinner();
-         });
+         
 
 
 
@@ -134,26 +117,20 @@ $(document).ready(function(){
 
 //playerone will need to select a box to add x into it, when they click select box in the grid it will need to display an X 
 // playertwo  will then need to do the same except the box that they choose will need to display an O, in the future  if players try to select a box with text already in it they will get an alert notifying them of issue.
-var cell;
+
 var player= 'X';
 
 function nextTurn(){
- if (player=== 'X'){
+    if (player=== 'X'){
       player= 'O';
-
- }
- else{
-  player = 'X';
-  turns++;
-
- }
-
-
+    }
+    else{
+      player = 'X';
+    }
 }
-function cellClick(cell){
+function clickIt(cell){
   if (cell.textContent === 'X' || cell.textContent === 'O')
     { alert ('This one already has something in it! Pick another one.');
-  
   }
   cell.textContent = player;
   nextTurn();
