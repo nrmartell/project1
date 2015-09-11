@@ -26,7 +26,7 @@ var turns=0;
 $('.gameboard').find('td').on('click', function(){
     if (turns % 2 === 0){
          turns++;
-        checkWinner('X');
+        checkWinner('w');
        
     } else {
         turns++;
@@ -77,16 +77,28 @@ function checkWinner(){
         console.log ("winner x down column 3");
         alert("Player 1 wins! Play Again");
     }
+    else if (boxone === 'X' && boxfour === 'X'&& boxeight=== 'X'){
+        console.log ("winner x across");
+        alert("Player 1 wins! Play Again");
+    }
+    else if (boxtwo === 'X' && boxfour === 'X'&& boxsix=== 'X'){
+        console.log ("winner x across");
+        alert("Player 1 wins! Play Again");
+    }
+    else if (boxzero === 'X' && boxfour === 'X'&& boxeight=== 'X'){
+        console.log ("winner x across");
+        alert("Player 1 wins! Play Again");
+    }
     else if (boxzero === 'O' && boxone === 'O'&& boxtwo=== 'O'){
-        console.log ("winner x across row 1");
+        console.log ("winner o across row 1");
         alert("Player 2 wins! Play Again");
     }
     else if (boxthree === 'O' && boxfour === 'O'&& boxfive=== 'O'){
-        console.log ("winner x across row 2");
+        console.log ("winner o across row 2");
         alert("Player 2 wins! Play Again");
     }
     else if (boxsix === 'O' && boxseven === 'O'&& boxeight=== 'O'){
-        console.log ("winner x across row 3");
+        console.log ("winner o across row 3");
         alert("Player 2 wins! Play Again");
     }
     else if (boxzero === 'O' && boxthree === 'O'&& boxsix=== 'O'){
@@ -101,6 +113,15 @@ function checkWinner(){
         console.log ("winner O down column 3");
         alert("Player 2 wins! Play Again");
     }
+    else if (boxtwo === 'O' && boxfour === 'O'&& boxsix=== 'O'){
+        console.log ("winner o across");
+        alert("Player 2 wins! Play Again");
+    }
+    else if (boxzero === 'O' && boxfour === 'O'&& boxeight=== 'O'){
+        console.log ("winner o across");
+        alert("Player 2 wins! Play Again");
+    }
+
     if (turns>=9){
         alert("Lets call this a draw!");
     }
