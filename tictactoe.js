@@ -1,20 +1,21 @@
 $(document).ready(function(){
 
   
-alert ("pick a player");
+alert ("Pick a Player");
 //button clicks!
 $("#playerOne").click(function(){
-    alert( "You are Player one")
+    alert( "You are Player one\n You are X's")
     console.log("playerOne");
 });
 
 $("#playerTwo").click(function(){
-   	alert("Hand it over to player one")
+   	alert("Hand it over to player one\nYou are O's")
     console.log("playerTwo");
 });
 
-$("#newGame").click(function(){
+$("#newgame").click(function(){
     location.reload();
+   
     console.log("newGame");
 }); 
  
@@ -24,21 +25,18 @@ var turns=0;
     
 $('.gameboard').find('td').on('click', function(){
     if (turns % 2 === 0){
-        //$(this).text('X'); 
          turns++;
         checkWinner('X');
        
     } else {
-        //$(this).text('O');
         turns++;
         checkWinner('O');
 
 
         }
     });
-
-
-
+        var playerOneWins = 0;
+        var playerTwoWins = 0;
 
 function checkWinner(){
     var boxzero = $("#boxzero").text();
@@ -51,11 +49,12 @@ function checkWinner(){
     var boxseven = $("#boxseven").text();
     var boxeight = $("#boxeight").text();
     
-   
-
     if (boxzero === 'X' && boxone === 'X'&& boxtwo=== 'X'){
         console.log ("winner x across row 1");
-        alert("Player 1 wins! Play Again");
+        //playerOneWins ++;
+        console.log("win count up")
+        alert("Player one wins! Play Again!")
+        //alert("Player 1 wins! " + "Player ONE: " + playerOneWins);
     }
     else if (boxthree === 'X' && boxfour === 'X'&& boxfive=== 'X'){
         console.log ("winner x across row 2");
@@ -108,11 +107,6 @@ function checkWinner(){
 
 }
          
-         
-
-
-
-
 });/*closing document ready*/
 
 

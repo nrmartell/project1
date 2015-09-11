@@ -1,19 +1,75 @@
 
-header, h2{
+
+header h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100px;
 	text-align: center;
+	color: white;
+	
+	}
+
+
+.gameboard  {
+	border-collapse:collapse;
+	border-spacing:0;
 }
-.scoreboard {
-    margin: 10px auto;            
-}​
-.scoreboard  {border-collapse:collapse;border-spacing:5;margin: 10px}
-.scoreboard td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.scoreboard th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-
-
-.gameboard  {border-collapse:collapse;border-spacing:0;}
-.gameboard td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.gameboard th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.gameboard td{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100px;
+	color:white;
+	padding:10px 5px;
+	border-style:solid;border-width:1px;
+	overflow:hidden;word-break:normal;
+	background-color: #FFEB00;
+}
+.gameboard th{font-family: 'Montserrat', sans-serif;
+	font-size:150px;
+	font-weight:normal;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
 
 .gameboard{
  	margin: 10px auto;  	
 }
+
+
+
+body {
+	background: url("gradient.jpg")
+}
+button {
+   border-top: 1px solid #e297f7;
+   background: #bd65d6;
+   background: -webkit-gradient(linear, left top, left bottom, from(#d573ff), to(#bd65d6));
+   background: -webkit-linear-gradient(top, #d573ff, #bd65d6);
+   background: -moz-linear-gradient(top, #d573ff, #bd65d6);
+   background: -ms-linear-gradient(top, #d573ff, #bd65d6);
+   background: -o-linear-gradient(top, #d573ff, #bd65d6);
+   padding: 20px 40px;
+   -webkit-border-radius: 29px;
+   -moz-border-radius: 29px;
+   border-radius: 29px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #ffffff;
+   font-size: 24px;
+   font-family: 'Montserrat', Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+button:hover {
+   border-top-color: #df69ff;
+   background: #df69ff;
+   color: #fcf9fc;
+   }
+button:active {
+   border-top-color: #e789fa;
+   background: #e789fa;
+   }
