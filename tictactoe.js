@@ -6,34 +6,36 @@ $(document).ready(function(){
     var X = $("#playerOne").click(function(){
    		 alert( "You are Player one")
     	 console.log("playerOne");
-    	});
+    });
 
-	   var O= $("#playerTwo").click(function(){
+	  var O= $("#playerTwo").click(function(){
    		 alert("Hand it over to player one")
     	 console.log("playerTwo");
-    	});
+    });
 
 	   $("#newGame").click(function(){
-   		 
-    	 console.log("newGame");
-    	}); 
+        console.log("newGame");
+      }); 
  
- var turns=0;
+ 
+      
+      var turns=0;
     
       $('.gameboard').find('td').on('click', function(){
             if (turns % 2 === 0){
-              $(this).text('X'); 
+             // $(this).text('X'); 
               checkWinner('X');
             } else {
-           //player 2's turn (O)
-              $(this).text('O');
+             // $(this).text('O');
               checkWinner('O');
             }
           turns++;
           
       });
 
- 
+
+
+
   function checkWinner(){
     var winner= null;
     var boxzero= $("#boxzero").text();
@@ -52,6 +54,7 @@ $(document).ready(function(){
           console.log ("winner x across row 1");
           
           alert("Player 1 wins! Play Again");
+          
            
     }
       else if (boxthree === 'X' && boxfour === 'X'&& boxfive=== 'X'){
@@ -110,16 +113,12 @@ $(document).ready(function(){
                   alert("Player 2 wins! Play Again");
                   
                   }
-                  if (turnCount>=9){
-                    alert("its a draw");
+                  if (turns>=9){
+                    alert("Lets call this a draw!");
                   }
 }
          
-          $(".cell").click(function(){
-  
-              checkWinner();
-         });
-
+          
 
 
 
@@ -150,6 +149,7 @@ function cellClick(cell){
   cell.textContent = player;
   nextTurn();
   }
+  
 
 
 
