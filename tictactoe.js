@@ -14,6 +14,7 @@ $("#playerTwo").click(function(){
 });
 
 $("#newGame").click(function(){
+    location.reload();
     console.log("newGame");
 }); 
  
