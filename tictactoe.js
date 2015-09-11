@@ -3,30 +3,32 @@ $(document).ready(function(){
   
   alert ("pick a player");
 //button clicks!
-    var X = $("#playerOne").click(function(){
+    $("#playerOne").click(function(){
    		 alert( "You are Player one")
     	 console.log("playerOne");
-    });
+    	});
 
-	  var O= $("#playerTwo").click(function(){
+	$("#playerTwo").click(function(){
    		 alert("Hand it over to player one")
     	 console.log("playerTwo");
-    });
+    	});
 
 	   $("#newGame").click(function(){
-        console.log("newGame");
-      }); 
+
+   		 
+    	 console.log("newGame");
+    	}); 
  
  
-      
-      var turns=0;
+ 
+ turns=0;
     
       $('.gameboard').find('td').on('click', function(){
             if (turns % 2 === 0){
-             // $(this).text('X'); 
+              $(this).text('X'); 
               checkWinner('X');
             } else {
-             // $(this).text('O');
+              $(this).text('O');
               checkWinner('O');
             }
           turns++;
@@ -54,7 +56,8 @@ $(document).ready(function(){
           console.log ("winner x across row 1");
           
           alert("Player 1 wins! Play Again");
-          
+          return winner= X;
+          console.log('return winner');
            
     }
       else if (boxthree === 'X' && boxfour === 'X'&& boxfive=== 'X'){
@@ -118,7 +121,11 @@ $(document).ready(function(){
                   }
 }
          
-          
+          $(".cell").click(function(){
+  
+              checkWinner();
+         });
+
 
 
 
@@ -137,6 +144,8 @@ function nextTurn(){
  }
  else{
   player = 'X';
+  turns++;
+
  }
 
 

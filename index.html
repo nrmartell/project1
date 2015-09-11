@@ -44,16 +44,16 @@
  <!--Game board Grid 3x3 Row and New Game Button-->
       <div class= "row"></div>
         <div class="table-responsive">
-          <table class="gameboard" style="undefined;table-layout: fixed; width: 157px">
+          <table class="gameboard" id ="theboard" style="undefined;table-layout: fixed; width: 157px">
             <colgroup>
               <col style="width: 150px">
               <col style="width: 150px">
               <col style="width: 150px">
             </colgroup>
             <tr>
-              <th height="150" class="cell" onclick="cellClick(this)" id= "boxzero"></th>
-              <th height="150" class="cell" onclick="cellClick(this)" id= "boxone"></th>
-              <th height="150" class="cell" onclick="cellClick(this)" id= "boxtwo"></th>
+              <td height="150" class="cell" onclick="cellClick(this)" id= "boxzero"></td>
+              <td height="150" class="cell" onclick="cellClick(this)" id= "boxone"></td>
+              <td height="150" class="cell" onclick="cellClick(this)" id= "boxtwo"></td>
             </tr>
             <tr>
               <td height="150" class="cell" onclick="cellClick(this)"id= "boxthree"></td>
@@ -71,8 +71,7 @@
   <!--New Game Button-->
       <div class= "row"></div>
         <p align="center">
-          <button class="newGame" onClick="init()">New Game</button>
-          <!--<button id="newGame" style="center">New Game</button>-->
+          <button id="newGame">New Game</button>
         </p>
    </div>
   
